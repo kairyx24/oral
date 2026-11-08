@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Портфолио Арлана — проекты, навыки и контакты.">
+  <title>Арлан — портфолио</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#0b0b12",
+            panel: "#141420",
+            violet: "#9b7cff",
+            lilac: "#c4b5fd"
+          },
+          fontFamily: {
+            sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #0b0b12; }
+    .grid-glow {
+      background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    .reveal { animation: appear .8s ease both; }
+    @keyframes appear { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .card { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+    .card:hover { transform: translateY(-5px); border-color: rgba(155,124,255,.55); background: #191927; }
+  </style>
+</head>
+<body class="text-slate-100 font-sans selection:bg-violet/40">
+  <div class="fixed inset-0 grid-glow pointer-events-none"></div>
+  <header class="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-5 py-6">
+    <a href="#home" class="text-xl font-black tracking-tight">arlan<span class="text-violet">.</span></a>
+    <nav class="hidden gap-7 text-sm text-slate-300 md:flex">
+      <a class="hover:text-white" href="#about">Обо мне</a>
+      <a class="hover:text-white" href="#skills">Навыки</a>
+      <a class="hover:text-white" href="#projects">Проекты</a>
+      <a class="hover:text-white" href="#contact">Контакты</a>
+    </nav>
+    <a href="#contact" class="rounded-full border border-white/15 px-4 py-2 text-sm hover:border-violet hover:text-lilac">Связаться</a>
+  </header>
+
+  <main class="relative z-10">
+    <section id="home" class="mx-auto grid min-h-[78vh] max-w-6xl items-center gap-12 px-5 py-20 md:grid-cols-[1.2fr_.8fr]">
+      <div class="reveal">
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-violet/25 bg-violet/10 px-3 py-1.5 text-xs text-lilac">
+          <span class="h-2 w-2 rounded-full bg-violet"></span> Моё digital-портфолио
+        </div>
+        <p class="mb-3 text-slate-400">Привет! Меня зовут</p>
+        <h1 class="text-6xl font-black tracking-tight sm:text-7xl lg:text-8xl">Арлан<span class="text-violet">.</span></h1>
+        <h2 class="mt-5 max-w-xl text-2xl font-semibold leading-snug text-slate-200 sm:text-3xl">Начинающий разработчик, который превращает идеи в сайты.</h2>
+        <p class="mt-5 max-w-lg leading-7 text-slate-400">Изучаю веб-разработку, экспериментирую с дизайном и создаю собственные проекты.</p>
+        <div class="mt-9 flex flex-wrap gap-3">
+          <a href="#projects" class="rounded-xl bg-violet px-6 py-3 font-semibold text-ink transition hover:bg-lilac">Мои проекты <span aria-hidden="true">↗</span></a>
+          <a href="#about" class="rounded-xl border border-white/15 px-6 py-3 font-semibold hover:border-white/40">Обо мне</a>
+        </div>
+      </div>
+      <div class="reveal mx-auto w-full max-w-sm">
+        <div class="relative rounded-[2rem] border border-white/10 bg-gradient-to-br from-violet/20 via-panel to-panel p-6 shadow-2xl shadow-violet/10">
+          <div class="absolute -right-5 -top-5 h-24 w-24 rounded-full bg-violet/20 blur-2xl"></div>
+          <div class="relative rounded-2xl border border-white/10 bg-ink/80 p-6">
+            <div class="mb-8 flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span><span class="h-2.5 w-2.5 rounded-full bg-amber-300"></span><span class="h-2.5 w-2.5 rounded-full bg-emerald-400"></span><span class="ml-auto text-xs text-slate-500">hello.html</span></div>
+            <p class="font-mono text-sm leading-8 text-slate-400"><span class="text-violet">const</span> developer = {<br>
+              &nbsp;&nbsp;name: <span class="text-emerald-300">"Арлан"</span>,<br>
+              &nbsp;&nbsp;focus: <span class="text-emerald-300">"Web development"</span>,<br>
+              &nbsp;&nbsp;curious: <span class="text-amber-300">true</span>,<br>
+              &nbsp;&nbsp;learning: <span class="text-emerald-300">"Every day"</span><br>
+              };</p>
+            <div class="mt-7 rounded-xl bg-white/5 p-4"><p class="text-xs text-slate-500">СТАТУС</p><p class="mt-1 font-semibold text-lilac">Идеи → Код → Результат</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+      <div class="mb-10"><p class="text-sm font-semibold uppercase tracking-[.25em] text-violet">01 / Обо мне</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">Немного обо мне</h2></div>
+      <div class="grid gap-5 md:grid-cols-[1.3fr_.7fr]">
+        <div class="rounded-3xl border border-white/10 bg-panel p-7 sm:p-9"><p class="text-lg leading-8 text-slate-300">Я Арлан. Мне интересно создавать современные сайты, разбираться в технологиях и придумывать собственные цифровые проекты. Сейчас я развиваю навыки HTML, CSS, JavaScript и Tailwind CSS.</p></div>
+        <div class="rounded-3xl border border-violet/20 bg-violet/10 p-7"><p class="text-sm text-lilac">МОЙ ПОДХОД</p><p class="mt-4 text-2xl font-bold">Учиться на практике.</p><p class="mt-3 leading-7 text-slate-400">Каждый новый проект — возможность попробовать что-то новое и стать лучше.</p></div>
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+      <div class="mb-10"><p class="text-sm font-semibold uppercase tracking-[.25em] text-violet">02 / Навыки</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">Что я изучаю</h2></div>
+      <div class="grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div class="card rounded-2xl border border-white/10 bg-panel p-5"><p class="text-2xl">🌐</p><h3 class="mt-4 font-bold">HTML</h3><p class="mt-1 text-sm text-slate-400">Структура страниц</p></div>
+        <div class="card rounded-2xl border border-white/10 bg-panel p-5"><p class="text-2xl">🎨</p><h3 class="mt-4 font-bold">CSS</h3><p class="mt-1 text-sm text-slate-400">Стили и адаптив</p></div>
+        <div class="card rounded-2xl border border-white/10 bg-panel p-5"><p class="text-2xl">⚡</p><h3 class="mt-4 font-bold">JavaScript</h3><p class="mt-1 text-sm text-slate-400">Интерактивность</p></div>
+        <div class="card rounded-2xl border border-white/10 bg-panel p-5"><p class="text-2xl">💨</p><h3 class="mt-4 font-bold">Tailwind CSS</h3><p class="mt-1 text-sm text-slate-400">Быстрая вёрстка</p></div>
+      </div>
+      <p class="mt-4 text-xs text-slate-500">Навыки указаны как изучаемые технологии, а не как профессиональная квалификация.</p>
+    </section>
+
+    <section id="projects" class="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+      <div class="mb-10"><p class="text-sm font-semibold uppercase tracking-[.25em] text-violet">03 / Проекты</p><h2 class="mt-3 text-3xl font-bold sm:text-4xl">Мои работы</h2></div>
+      <div class="grid gap-5 md:grid-cols-3">
+        <article class="card rounded-3xl border border-white/10 bg-panel p-6">
+          <div class="mb-6 flex h-36 items-center justify-center rounded-2xl bg-gradient-to-br from-red-950 to-orange-900 text-5xl">🎮</div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-violet">Игровой сайт</p><h3 class="mt-2 text-xl font-bold">The Binding of Isaac</h3>
+          <p class="mt-3 min-h-16 text-sm leading-6 text-slate-400">Страница о любимой игре с информацией и материалами для игроков.</p>
+          <a class="mt-5 inline-block text-sm font-semibold text-lilac hover:text-white" href="https://kairyx24.github.io/the-binding-of-isaac/" target="_blank" rel="noreferrer">Открыть проект ↗</a>
+        </article>
+        <article class="card rounded-3xl border border-white/10 bg-panel p-6">
+          <div class="mb-6 flex h-36 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-950 to-indigo-900 text-5xl">🥽</div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-violet">Игровой концепт</p><h3 class="mt-2 text-xl font-bold">VR Adventure</h3>
+          <p class="mt-3 min-h-16 text-sm leading-6 text-slate-400">Идея VR-приключения с интерактивным окружением и физикой объектов.</p>
+          <span class="mt-5 inline-block text-sm text-slate-500">Концепция проекта</span>
+        </article>
+        <article class="card rounded-3xl border border-white/10 bg-panel p-6">
+          <div class="mb-6 flex h-36 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-950 to-blue-900 text-5xl">💻</div>
+          <p class="text-xs font-semibold uppercase tracking-widest text-violet">Учебный проект</p><h3 class="mt-2 text-xl font-bold">Python / Flask</h3>
+          <p class="mt-3 min-h-16 text-sm leading-6 text-slate-400">Небольшое веб-приложение для практики Python и серверной логики.</p>
+          <span class="mt-5 inline-block text-sm text-slate-500">Учебная работа</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="mx-auto max-w-6xl scroll-mt-20 px-5 py-20">
+      <div class="rounded-[2rem] border border-violet/20 bg-gradient-to-br from-violet/15 to-panel p-8 text-center sm:p-14">
+        <p class="text-sm font-semibold uppercase tracking-[.25em] text-lilac">04 / Контакты</p>
+        <h2 class="mt-4 text-3xl font-black sm:text-5xl">Есть идея?</h2>
+        <p class="mx-auto mt-4 max-w-lg leading-7 text-slate-400">Буду рад обсудить интересные проекты и новые идеи.</p>
+        <p class="mt-7 text-sm text-slate-500">Добавь сюда свою почту или ссылку на Telegram</p>
+        <a href="mailto:your-email@example.com" class="mt-3 inline-flex rounded-xl bg-violet px-6 py-3 font-semibold text-ink hover:bg-lilac">Написать мне</a>
+      </div>
+    </section>
+  </main>
+  <footer class="relative z-10 border-t border-white/10 px-5 py-7 text-center text-sm text-slate-500">© 2026 Арлан. Сделано с интересом к веб-разработке.</footer>
+</body>
+</html>
